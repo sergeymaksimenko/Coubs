@@ -1,0 +1,11 @@
+.coub {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: rgb(72,170,231);
+}
+table {
+border: solid 2px rgb(72,170,231);
+
+
+}
