@@ -11,6 +11,7 @@ html, body {
 }
 
 .container {
+  max-height: max-content;
 }
 
 .buttonPlusColumn {
