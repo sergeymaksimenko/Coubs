@@ -1,28 +1,24 @@
 window.onload = function () {
-    let cellElements = document.getElementsByClassName('cell');
-    Array.prototype.forEach.call(cellElements, function (element) {
-        element.addEventListener('mousemove', function () {
-            moveButtons(element)
-        }, false);
-        element.addEventListener('mouseout', hideButtons, false);
+    const tableElement = document.querySelector('.table');
+    const cellElements = tableElement.querySelectorAll('.cell')
+    const minusRowButton = tableElement.previousElementSibling;
+    const minusColumnButton = minusRowButton.previousElementSibling;
+    cellElements.forEach(function (item) {
+        item.addEventListener('mouseover', moveButtons);
     });
-};
+    tableElement.addEventListener('mouseout', hideButtons);
 
-function moveButtons(element) {
-    let buttonMinusColumn = document.querySelector('.buttonMinusColumn');
-    let buttonMinusRow = document.querySelector('.buttonMinusRow');
-    buttonMinusColumn.style.visibility = 'visible';
-    buttonMinusRow.style.visibility = 'visible';
-    let table = document.querySelector('.table');
-    buttonMinusColumn.style.marginLeft = event.pageX - table.offsetLeft + (element.offsetWidth / 2) + 'px';
-    buttonMinusRow.style.marginTop = event.pageY - table.offsetTop - (element.offsetHeight / 2) + 'px';
-}
-
-function hideButtons(event) {
-    if (!event.relatedTarget.classList.contains('cell')) {
-        let buttonMinusColumn = document.querySelector('.buttonMinusColumn');
-        let buttonMinusRow = document.querySelector('.buttonMinusRow');
-        buttonMinusColumn.style.visibility = 'hidden';
-        buttonMinusRow.style.visibility = 'hidden';
+    function moveButtons(event) {
+        setButtonsVisibility('visible');
+        minusColumnButton.style.marginLeft = event.target.offsetLeft - tableElement.offsetLeft + minusRowButton.offsetWidth + 'px';
+        minusRowButton.style.marginTop = event.target.offsetTop - tableElement.offsetTop + 'px';
     }
-}
+
+    function hideButtons() {
+        setButtonsVisibility('hidden');
+    }
+
+    function setButtonsVisibility(visibility) {
+        minusColumnButton.style.visibility = minusRowButton.style.visibility = visibility;
+    }
+};
