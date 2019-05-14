@@ -19,10 +19,13 @@ html, body {
 }
 
 .plusColumnButton {
-  float: right;
   background-color: rgb(240, 167, 0);
   margin-top: 1px;
-  margin-left: 1px;
+  margin-left: 51px;
+}
+
+.plusColumnButton:hover {
+  background-color: rgb(250, 192, 82);
 }
 
 .table {
@@ -56,19 +59,34 @@ html, body {
 }
 
 .plusRowButton {
+  float: right;
   background-color: rgb(240, 167, 0);
-  margin-top: 1px;
-  margin-left: 51px;
+  margin-top: 3px;
+  margin-left: 1px;
+}
+
+.plusRowButton:hover {
+  background-color: rgb(250, 192, 82);
 }
 
 .minusColumnButton {
+  position: relative;
   background-color: rgb(176, 1, 0);
-  margin-left: 51px;
+  left: 1px;
   margin-bottom: 1px;
 }
 
+.minusColumnButton:hover {
+  background-color: rgb(197, 77, 76);
+}
+
 .minusRowButton {
-  margin-right: 1px;
+  position: relative;
+  top: 1px;
   float: left;
   background-color: rgb(176, 1, 0);
+}
+
+.minusRowButton:hover {
+  background-color: rgb(197, 77, 76);
 }
