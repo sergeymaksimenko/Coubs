@@ -16,12 +16,18 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .plusColumnButton {
+  float: right;
   background-color: rgb(240, 167, 0);
-  margin-top: 1px;
-  margin-left: 51px;
+  margin-top: 3px;
+  margin-left: 1px;
 }
 
 .plusColumnButton:hover {
@@ -59,10 +65,9 @@ html, body {
 }
 
 .plusRowButton {
-  float: right;
   background-color: rgb(240, 167, 0);
-  margin-top: 3px;
-  margin-left: 1px;
+  margin-top: 1px;
+  margin-left: 51px;
 }
 
 .plusRowButton:hover {
@@ -84,6 +89,7 @@ html, body {
   position: relative;
   top: 1px;
   float: left;
+  margin-right: 1px;
   background-color: rgb(176, 1, 0);
 }
 

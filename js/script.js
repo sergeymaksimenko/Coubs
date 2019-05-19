@@ -30,9 +30,11 @@ window.onload = function () {
     plusRowButton.addEventListener('mousedown', addRow);
     plusColumnButton.addEventListener('mousedown', addColumn);
 
+    hideButtons();
+
     function moveButtons({target: currentTarget}) {
         stayButtonsVisible();
-        minusColumnButton.style.left = `${currentTarget.offsetLeft - tableElement.offsetLeft + minusRowButton.offsetWidth}px`;
+        minusColumnButton.style.left = `${currentTarget.offsetLeft - tableElement.offsetLeft + minusRowButton.offsetWidth + 1}px`;
         minusRowButton.style.top = `${currentTarget.offsetTop - tableElement.offsetTop}px`;
     }
 
@@ -80,6 +82,7 @@ window.onload = function () {
     }
 
     function deleteElementsFromDOM(elements) {
+        console.log(elements);
         elements.forEach(function (item) {
             item.remove();
         })
