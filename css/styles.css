@@ -96,3 +96,8 @@ html, body {
 .minusRowButton:hover {
   background-color: rgb(197, 77, 76);
 }
+
+img {
+  width: 30%;
+  height: 30%;
+}
