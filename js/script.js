@@ -4,7 +4,7 @@ window.onload = function () {
     const minusColumnButton = document.querySelector(".minusColumnButton");
     const plusRowButton = document.querySelector('.plusRowButton');
     const plusColumnButton = document.querySelector('.plusColumnButton');
-    let timerID = [];
+    const timerID = [];
 
     const addListenerToCells = function () {
         tableElement.querySelectorAll('.cell').forEach(function (item) {
@@ -30,8 +30,6 @@ window.onload = function () {
     plusRowButton.addEventListener('mousedown', addRow);
     plusColumnButton.addEventListener('mousedown', addColumn);
 
-    hideButtons();
-
     function moveButtons({target: currentTarget}) {
         stayButtonsVisible();
         minusColumnButton.style.left = `${currentTarget.offsetLeft - tableElement.offsetLeft + minusRowButton.offsetWidth + 1}px`;
@@ -53,16 +51,16 @@ window.onload = function () {
             minusColumnButton.style.visibility = 'hidden';
     }
 
-    function deleteColumn({target: currentButton}) {
+    function deleteColumn() {
         let filteredCells = [...tableElement.querySelectorAll('.cell')].filter(function (item) {
-            return item.offsetLeft === currentButton.offsetLeft;
+            return item.offsetLeft === minusColumnButton.offsetLeft;
         });
         deleteElementsFromDOM(filteredCells);
     }
 
-    function deleteRow({target: currentButton}) {
+    function deleteRow() {
         let filteredCells = [...tableElement.querySelectorAll('.tableRow')].filter(function (item) {
-            return item.offsetTop === currentButton.offsetTop;
+            return item.offsetTop === minusRowButton.offsetTop;
         });
         deleteElementsFromDOM(filteredCells);
     }
@@ -82,7 +80,6 @@ window.onload = function () {
     }
 
     function deleteElementsFromDOM(elements) {
-        console.log(elements);
         elements.forEach(function (item) {
             item.remove();
         })

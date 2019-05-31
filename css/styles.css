@@ -66,8 +66,7 @@ html, body {
 
 .plusRowButton {
   background-color: rgb(240, 167, 0);
-  margin-top: 1px;
-  margin-left: 51px;
+  margin-left: 53px;
 }
 
 .plusRowButton:hover {
@@ -79,6 +78,7 @@ html, body {
   background-color: rgb(176, 1, 0);
   left: 1px;
   margin-bottom: 1px;
+  visibility: hidden;
 }
 
 .minusColumnButton:hover {
@@ -91,6 +91,7 @@ html, body {
   float: left;
   margin-right: 1px;
   background-color: rgb(176, 1, 0);
+  visibility: hidden;
 }
 
 .minusRowButton:hover {
