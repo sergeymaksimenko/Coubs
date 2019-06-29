@@ -98,7 +98,15 @@ html, body {
   background-color: rgb(197, 77, 76);
 }
 
-img {
-  width: 30%;
-  height: 30%;
+.img {
+  width: 20%;
+  height: 20%;
+}
+
+.minus-img {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB7gAAAe4BoWPTtwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABPSURBVEiJY2AYBaNgFAx9wIjEVkTjUwL+MzAw3EcWYHn48OGfv3///qcGfvjw4R8GBgYWBgYGBiYquRgnQA4SQSqb/Z7K5o2CUTAKBgwAABsdUZevIWFNAAAAAElFTkSuQmCC') center no-repeat transparent;
+}
+
+.plus-img {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB7gAAAe4BoWPTtwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAA3SURBVEiJY2AYUeA/FJCih4lWjhm1YNSCIWQBI4xBagYiaDAjIyMDAx18QBIYLSpGLRi1YKQCANcpFBRr2uv+AAAAAElFTkSuQmCC') center no-repeat transparent;
 }
