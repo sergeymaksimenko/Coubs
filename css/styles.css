@@ -3,16 +3,42 @@ html, body {
   padding: 0;
 }
 
-.container {
+
+.layout {
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
+
+.button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.plusColumnButton {
+  float: right;
+  background-color: rgb(240, 167, 0);
+  margin-top: 3px;
+  margin-left: 1px;
+}
+
+.plusColumnButton:hover {
+  background-color: rgb(250, 192, 82);
+}
+
 .table {
   border: solid 2px rgb(72, 170, 231);
-  background-color: white;
+  display: inline-block;
 }
 
 .tableRow {
@@ -38,4 +64,51 @@ html, body {
 
 .cell:last-child {
   margin-right: 1px;
+}
+
+.plusRowButton {
+  background-color: rgb(240, 167, 0);
+  margin-left: 53px;
+}
+
+.plusRowButton:hover {
+  background-color: rgb(250, 192, 82);
+}
+
+.minusColumnButton {
+  position: relative;
+  background-color: rgb(176, 1, 0);
+  left: 1px;
+  margin-bottom: 1px;
+  visibility: hidden;
+}
+
+.minusColumnButton:hover {
+  background-color: rgb(197, 77, 76);
+}
+
+.minusRowButton {
+  position: relative;
+  top: 1px;
+  float: left;
+  margin-right: 1px;
+  background-color: rgb(176, 1, 0);
+  visibility: hidden;
+}
+
+.minusRowButton:hover {
+  background-color: rgb(197, 77, 76);
+}
+
+.img {
+  width: 20%;
+  height: 20%;
+}
+
+.minus-img {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB7gAAAe4BoWPTtwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABPSURBVEiJY2AYBaNgFAx9wIjEVkTjUwL+MzAw3EcWYHn48OGfv3///qcGfvjw4R8GBgYWBgYGBiYquRgnQA4SQSqb/Z7K5o2CUTAKBgwAABsdUZevIWFNAAAAAElFTkSuQmCC') center no-repeat transparent;
+}
+
+.plus-img {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB7gAAAe4BoWPTtwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAA3SURBVEiJY2AYUeA/FJCih4lWjhm1YNSCIWQBI4xBagYiaDAjIyMDAx18QBIYLSpGLRi1YKQCANcpFBRr2uv+AAAAAElFTkSuQmCC') center no-repeat transparent;
 }
